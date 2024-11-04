@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/cargarPelis.css">
+    <title>Cargar Pelis</title>
+</head>
+<body>
+    <nav>
+        <a href="Index.html">HOME</a>
+    </nav>
+    <div class="contenedor">
+        <div id="nueva-pelicula" class="nuevaPelicula" >
+          <div class="cabecera">
+            <h1>Cargar una pelicula nueva</h1>
+          </div>
+            <form id="form">
+              <div class="form-control">
+                <label for="titulo">Título</label>
+                <input id="titulo" type="text">
+                <p> </p>
+              </div>
+              <br>    
+              <div class="form-control">
+                <label for="genero">Genero</label>
+                <input id="genero" type="text">
+                <p> </p>
+              </div>
+              <br>
+              <div class="form-control">
+                <label for="fechaEstreno">Fecha de estreno</label>
+                <input id="fechaEstreno" type="datetime">
+                <p> </p>
+              </div>
+              <br>
+              <div class="form-control">
+                <label for="resumen">Resumen</label>
+                <input id="resumen" type="text">
+                <p> </p>
+              </div>
+              <br>
+              <button onclick="nuevaPelicula()" class="NuevoButton" >Agregar la nueva pelicula</button>
+            </form>
+        </div>
+      </div>
+    <footer>
+    </footer>
+    <script src="Javas/cargarPelis.js"></script>
+</body>
+</html>

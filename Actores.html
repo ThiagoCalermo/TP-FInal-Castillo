@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/actores.css">
+    <title>Actores</title>
+</head>
+<body>
+    <nav>
+        <a href="Index.html">HOME</a>
+        <a href="cargarActor.html">Cargar un nuevo actor</a>
+    </nav>
+
+    <div class="contenedor" id="lista">
+        <div>
+            <table id="TABLA">
+                <thead>
+                  <tr>
+                    <th>IdCod</th>
+                    <th>Nombre</th>
+                    <th>Fecha de nacimiento</th>
+                  </tr>
+                </thead>
+                <tbody id="resultados">
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <div class="EditarActor" id="EditarActor">
+      <div id="nuevo-actor" class="nuevoActor" >
+        <div class="cabecera">
+          <h1>Nuevo producto</h1>
+        </div>
+          <form id="form">
+            <input type="hidden" id="IdCod">
+            <div class="form-control">
+              <label for="nombre">Nuevo nombre del actor</label>
+              <input id="nombre" type="text">
+              <p> </p>
+            </div>
+            <br>    
+            <div class="form-control">
+              <label for="fechaNacimiento">Nueva Fecha</label>
+              <input id="fechaNacimiento" type="text">
+              <p> </p>
+            </div>
+            <br>
+
+            <button onclick="GuardarCambios()" class="NuevoButton" >Crear el nuevo producto</button>
+          </form>
+      </div>
+
+    <footer>
+
+    </footer>
+    <script src="Javas/actores.js"></script>
+</body>
+</html>

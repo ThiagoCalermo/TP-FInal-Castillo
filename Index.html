@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
+    <title>PeliMás</title>
+</head>
+<body>
+  <nav>
+    <img src="imagenes/icono-letra-p-negra-punta-puntiaguda_95164-8953.jpg" style="width: 4%;" alt="">
+    <a href="cargarPelis.html" style="text-decoration: none;">Cargar peliculas</a>
+    <a href="Actores.html">Actores</a>
+
+  </nav>
+
+  <div class="contenedor" id="lista">
+        <div>
+            <table id="TABLA">
+                <thead>
+                  <tr>
+                    <th>IdCod</th>
+                    <th>Título</th>
+                    <th>Genero</th>
+                    <th>Fecha de estreno</th>
+                    <th>Resumen</th>
+                  </tr>
+                </thead>
+                <tbody id="resultados">
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <div class="EditarPelicula" id="EditarPelicula">
+      <div id="nuevo-pelicula" class="nuevoPelicula" >
+        <div class="cabecera">
+          <h1>Nuevo producto</h1>
+        </div>
+          <form id="form">
+            <input type="hidden" id="IdCod">
+            <div class="form-control">
+              <label for="titulo">Título de la pelicula</label>
+              <input id="titulo" type="text">
+              <p> </p>
+            </div>
+            <br>   
+            <div class="form-control">
+              <label for="genero">Genero nuevo</label>
+              <input id="genero" type="text">
+              <p> </p>
+            </div> 
+            <br>
+            <div class="form-control">
+              <label for="fechaEstreno">Fecha de estreno</label>
+              <input id="fechaEstreno" type="text">
+              <p> </p>
+            </div>
+            <br>
+            <div class="form-control">
+              <label for="resumen">Resumen</label>
+              <input id="resumen" type="text">
+              <p> </p>
+            </div> 
+            <br>
+            <button onclick="GuardarCambios()" class="NuevoButton" >Crear el nuevo producto</button>
+          </form>
+      </div>
+    
+    <footer></footer>
+    <script src="Javas/Pelis.js"></script>
+</body>
+</html>

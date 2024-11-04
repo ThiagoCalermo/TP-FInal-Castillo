@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/cargarActores.css">
+    <title>Cargar actor</title>
+</head>
+<body>
+    <nav>
+        <a href="Index.html">HOME</a>
+        <a href="Actores.html">Actores</a>
+    </nav>
+    <div class="contenedor">
+        <div id="nuevo-producto" class="nuevoActor" >
+            <div class="cabecera">
+              <h1>Cargar un nuevo actor</h1>
+            </div>
+              <form id="form">
+                <div class="form-control">
+                  <label for="nombre">Nombre</label>
+                  <input id="nombre" type="text">
+                  <p> </p>
+                </div>
+                <br>    
+                <div class="form-control">
+                  <label for="fechaNacimiento">Fecha de nacimiento</label>
+                  <input id="fechaNacimiento" type="text">
+                  <p> </p>
+                </div>
+                <br>
+                <button onclick="nuevoActor()">Agregar el nuevo actor</button>
+              </form>
+          </div>
+    </div>
+    <script src="Javas/cargarActor.js"></script>
+</body>
+</html>
