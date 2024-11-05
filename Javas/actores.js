@@ -11,7 +11,7 @@ window.addEventListener('load',()=>{
 
 function ObtenerActores() {
   document.getElementById('lista').setAttribute('style','display:flex');
-  document.getElementById('EditarActor').setAttribute('style','display:none');
+  document.getElementById('contenedorForm').setAttribute('style','display:none');
     fetch(UrlActores)
       .then(response => response.json())
       .then(actores => {
@@ -28,11 +28,28 @@ function MostrarActores(actores) {
                 <td>${actores[i].idcod}</td>
                 <td>${actores[i].param1}</td>
                 <td>${actores[i].param2}</td>
-                <th><button onclick="brorrarActor('${actores[i].idcod}')">Borrar</button><button onclick="editarActor('${actores[i].idcod}')">Editar</button></th>
+                <th><button onclick="borrarActor('${actores[i].idcod}')" style="background-color: #292929;color: #ea899e;">Borrar</button><button onclick="editarActor('${actores[i].idcod}')" style="background-color: #292929;color: #ea899e;">Editar</button></th>
          </tr>`;
     };
     document.getElementById('resultados').innerHTML = html;
 }
+
+let actorG = {
+  id: 0,
+  idLegajo: "16753",
+  idcod: "",
+  tabla: "actores",
+  param1: document.getElementById('nombre').value,
+  param2: document.getElementById('fechaNacimiento').value,
+  param3: "",
+  param4: "",
+  param5: "",
+  param6: "",
+  param7: "",
+  param8: "",
+  param9: "",
+  param10: ""
+};
 
 function editarActor(idcod) {
   
@@ -42,46 +59,44 @@ function editarActor(idcod) {
      
       document.getElementById('nombre').value = actor.param1;
       document.getElementById('fechaNacimiento').value = actor.param2;
+      actorG.id = actor.id
+      actorG.idcod = actor.idcod
       
       document.getElementById('lista').setAttribute('style', 'display:none');
-      document.getElementById('EditarActor').setAttribute('style','display:flex');
+      document.getElementById('contenedorForm').setAttribute('style','display:flex');
     })
     .catch(error => console.error('Error:', error));
 }
 
 
-async function GuardarCambios() {
-  const actor = {
-    param1: document.getElementById('nombre').value,
-    param2: document.getElementById('fechaNacimiento').value,
-  };
-
-  console.log(actor);
-
+function GuardarCambios() {
+    actorG.param1 = document.getElementById('nombre').value,
+    actorG.param2 = document.getElementById('fechaNacimiento').value
   if (validaCampos()) {
     try {
-      const response = await fetch(`${UrlActores}`, {
+      fetch(UrlActores, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(actor)
-      });
-
-      if (!response.ok) {
-        throw new Error('Error en la respuesta del servidor');
-      }
-
-      const data = await response.json();
-      console.log(data);
-      alert('Se modificó el actor correctamente.');
+        body: JSON.stringify(actorG),
+      })
+      .then(response => response.text())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error:', error.json()));
+      alert("Actor modificado con exito");
+      window.location.reload();
     } catch (error) {
-      console.error('Error:', error);
-      alert('Error al modificar el actor.'); 
+      console.error('Error al intentar guardar los cambios:', error);
     }
   }
 }
 
+function CancelarCambios(){
+  document.getElementById('lista').setAttribute('style','display:flex');
+  document.getElementById('contenedorForm').setAttribute('style','display:none');
+}
 
-function brorrarActor(idcod) {
+
+function borrarActor(idcod) {
   if (window.confirm(`¿Estás seguro de que deseas eliminar el producto con el idcod ${idcod}?`)) {
     fetch(UrlActores, {
       method: 'DELETE',

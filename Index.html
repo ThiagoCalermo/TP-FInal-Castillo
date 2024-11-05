@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/index.css">
-    <title>PeliMás</title>
+    <title>PeliMás-Teatro</title>
 </head>
 <body>
   <nav>
@@ -13,8 +13,11 @@
     <a href="Actores.html">Actores</a>
 
   </nav>
-
-  <div class="contenedor" id="lista">
+  <div class="contenedorSaludo" id="contenedorSaludo">
+    <h1>Mira nuetros catalogos de peliculas disponibles en nuetro teatro</h1>
+    <p>Interpretamos tus peliculas favoritas y les damos una vuelta de rosca</p>
+  </div>
+  <div class="contenedorPeliculas" id="lista">
         <div>
             <table id="TABLA">
                 <thead>
@@ -32,42 +35,65 @@
               </table>
         </div>
     </div>
-    <div class="EditarPelicula" id="EditarPelicula">
-      <div id="nuevo-pelicula" class="nuevoPelicula" >
-        <div class="cabecera">
-          <h1>Nuevo producto</h1>
+    <div class="contenedorForm" id="contenedorForm">
+      <div class="EditarPelicula" id="EditarPelicula">
+        <div id="nuevo-pelicula" class="nuevaPelicula" >
+          <div class="cabecera">
+            <h1>Cambiar pelicula</h1>
+          </div>
+            <form id="form">
+              <input type="hidden" id="IdCod">
+              <div class="form-control">
+                <label for="titulo">Título de la pelicula</label>
+                <input id="titulo" type="text">
+                <p> </p>
+              </div>
+              <br>   
+              <div class="form-control">
+                <label for="genero">Genero nuevo</label>
+                <input id="genero" type="text">
+                <p> </p>
+              </div> 
+              <br>
+              <div class="form-control">
+                <label for="fechaEstreno">Fecha de estreno</label>
+                <input id="fechaEstreno" type="text">
+                <p> </p>
+              </div>
+              <br>
+              <div class="form-control">
+                <label for="resumen">Resumen</label>
+                <input id="resumen" type="text">
+                <p> </p>
+              </div> 
+              <br>
+              <button onclick="GuardarCambios()" class="NuevoButton" >Modificar la pelicula</button>
+              <button onclick="CancelarCambios()" class="NuevoButton">Cancelar</button>
+            </form>
         </div>
-          <form id="form">
-            <input type="hidden" id="IdCod">
-            <div class="form-control">
-              <label for="titulo">Título de la pelicula</label>
-              <input id="titulo" type="text">
-              <p> </p>
-            </div>
-            <br>   
-            <div class="form-control">
-              <label for="genero">Genero nuevo</label>
-              <input id="genero" type="text">
-              <p> </p>
-            </div> 
-            <br>
-            <div class="form-control">
-              <label for="fechaEstreno">Fecha de estreno</label>
-              <input id="fechaEstreno" type="text">
-              <p> </p>
-            </div>
-            <br>
-            <div class="form-control">
-              <label for="resumen">Resumen</label>
-              <input id="resumen" type="text">
-              <p> </p>
-            </div> 
-            <br>
-            <button onclick="GuardarCambios()" class="NuevoButton" >Crear el nuevo producto</button>
-          </form>
       </div>
+    </div>
     
-    <footer></footer>
+    <footer>
+      <div class="contacto">
+        <p style="margin: 0%;">Información de Contacto</p>
+        <ul style="margin: 0%;">
+            <li>Dirección: Juan José Paso (sur) 4074 - San Francisco, Córdoba. </li>
+            <li>Teléfono:+54 324 565 644</li>
+            <li>Email: TeatroPeliM@gmail.com</li>
+            <li>No somos un cine, solo interpretamos peliculas</li>
+        </ul>
+    </div>
+    <div class="redesSociales">
+      <a href="./" class="redesSociales-A">
+          <img src="imagenes/instagram-logo-.png" alt="" class="icon-redes">
+      </a>
+      <a href="./" class="redesSociales-A">
+          <img src="imagenes/facebook-logo.png" alt="" class="icon-redes">
+      </a>
+   </div> 
+   <br>
+    </footer>
     <script src="Javas/Pelis.js"></script>
 </body>
 </html>

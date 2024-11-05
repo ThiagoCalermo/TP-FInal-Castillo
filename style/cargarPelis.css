@@ -1,3 +1,6 @@
+body{
+    background-color: antiquewhite;
+}
 nav{
     border: 1px, solid ;
     border-color: black;
@@ -32,11 +35,16 @@ button{
 
 
 .nuevaPelicula{
-    
+    background-color: #6a6a6a;
     box-shadow: 19px 20px 8px -9px black;
     overflow: hidden;
     width: 400px;   
     max-width: 100%;
+}
+img{
+    border: 1px, solid ;
+    border-color: #ea899e;
+    border-width: 3px;
 }
 a{
     text-decoration: none;
@@ -55,7 +63,9 @@ a{
     justify-content: center;
     min-height: 90vh;
     margin: 30px;
-    background-color: #6a6a6a;
+    background-color: #292929;
+    border: 5px,solid;
+    border-color: black;
 }
 .cabecera{
     background-color:black;
@@ -75,16 +85,17 @@ a{
     display: inline-block;
     margin-bottom: 7px;
     font: weigth 200px;
-    color: rgb(79, 4, 62);
+    color: black;
 }
 .form-control input{
     border:none;
-    background-color: aliceblue;
+    background-color: antiquewhite;
     display: block;
     font-family: inherit;
     font-size: 16px;
     padding: 12px;
     width: 90%;
+    border: 1px,solid;
 }
 .form-control,input:focus{
     outline: none;

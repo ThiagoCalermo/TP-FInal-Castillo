@@ -1,3 +1,6 @@
+body{
+    background-color: antiquewhite;
+}
 nav{
     border: 1px, solid ;
     border-color: black;
@@ -12,15 +15,18 @@ nav{
     height: 40px;
 }
 footer{
+    margin-top: 5px;
     border: 1px, solid ;
     border-color: black;
     border-width: 5px;
     background-color: #292929;
-    padding-bottom: 0.1px;
-    position: fixed;
+    padding-bottom: 0.1px;  
     max-height: 400px;
     bottom: 0;
-    width: 100%;
+    width: 98.7%;
+    color: #ea899e;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
 }
 .contenedor{
     display: flex;
@@ -29,13 +35,16 @@ footer{
     height: 100vh;  
     flex-wrap: wrap;
     color: black;
-    background-color: #6a6a6a;
-    
+    background-color: #292929;
+    margin-top: 5px;
+    border: 5px,solid;
+    border-color: black;
 }
 #TABLA {
     border: 1px, solid ;
     border-color: black;
     border-width: 3px;
+    background-color: #6a6a6a;
 }
 th{
     border: 1px, solid ;
@@ -43,12 +52,110 @@ th{
     border-width: 3px;   
     
 }
+img{
+    border: 1px, solid ;
+    border-color: #ea899e;
+    border-width: 3px;
+}
 a{
-    border:  1px, solid;
+    color: #ea899e;
+    border: 1px, solid ;
     border-color: black;
-    background-color: black;
+    border-width: 3px;
     margin: 10px;
     padding: 5px;
-    color: #ea899e;
     text-decoration: none;
+    background-color: black;
 }
+.nuevoActor{
+    height: 100%;
+    box-shadow: 19px 20px 8px -9px black;
+    overflow: hidden;
+    background-color: #6a6a6a;
+    width: 100%;
+}
+.contenedorForm{
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    margin: 30px;
+    background-color: #292929;
+}
+
+.cabecera{
+    background-color:black;
+    color: #ea899e;
+    text-align: center;
+    padding: 10px
+}
+#form{
+    padding: 30px 20px;
+}
+.form-control{
+    margin-bottom: 7px; 
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+    display: inline-block;
+    margin-bottom: 7px;
+    font: weigth 200px;
+    color: black ;
+}
+.form-control input{
+    border:none;
+    background-color: antiquewhite;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 12px;
+    width: 90%;
+}
+.form-control,input:focus{
+    outline: none;
+}
+.form-control.ok input{
+    border:1px solid;
+    border-color: green;
+    
+}
+.form-control.falla input{
+    border: 1px solid;
+    border-color: red;
+    
+}
+#form button{
+    background-color: black;
+    border: 1px solid ;
+    border-radius: 10px;
+    color: #ea899e;
+    display: block;
+    width: 97%;
+    padding: 10px;
+    font-size: 18px;
+}
+.form-control p{
+    visibility: hidden;
+    position: absolute;
+    font-size: small;
+    font-weight: 500;
+    text-align: right;
+}
+.form-control.falla p{
+    visibility: visible;
+    color: red;
+}
+.redesSociales-A{
+    background-color: #292929;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    display: flex;
+    max-width: 2%;
+}
+.icon-redes{
+    border: none;
+}
+  

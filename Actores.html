@@ -8,6 +8,7 @@
 </head>
 <body>
     <nav>
+      <img src="imagenes/icono-letra-p-negra-punta-puntiaguda_95164-8953.jpg" style="width: 4%;" alt="">
         <a href="Index.html">HOME</a>
         <a href="cargarActor.html">Cargar un nuevo actor</a>
     </nav>
@@ -28,32 +29,53 @@
               </table>
         </div>
     </div>
-    <div class="EditarActor" id="EditarActor">
-      <div id="nuevo-actor" class="nuevoActor" >
-        <div class="cabecera">
-          <h1>Nuevo producto</h1>
+    <div class="contenedorForm" id="contenedorForm"> 
+      <div class="EditarActor" id="EditarActor">
+        <div id="nuevo-actor" class="nuevoActor" >
+          <div class="cabecera">
+            <h1>Cambiar actor</h1>
+          </div>
+            <form id="form">
+              <input type="hidden" id="IdCod">
+              <div class="form-control">
+                <label for="nombre">Nuevo nombre del actor</label>
+                <input id="nombre" type="text">
+                <p> </p>
+              </div>
+              <br>    
+              <div class="form-control">
+                <label for="fechaNacimiento">Nueva Fecha</label>
+                <input id="fechaNacimiento" type="text">
+                <p> </p>
+              </div>
+              <br>
+  
+              <button onclick="GuardarCambios()" class="NuevoButton" >Modificar al actor</button>
+              <button onclick="CancelarCambios()" class="NuevoButton" >Cancelar cambios</button>
+            </form>
         </div>
-          <form id="form">
-            <input type="hidden" id="IdCod">
-            <div class="form-control">
-              <label for="nombre">Nuevo nombre del actor</label>
-              <input id="nombre" type="text">
-              <p> </p>
-            </div>
-            <br>    
-            <div class="form-control">
-              <label for="fechaNacimiento">Nueva Fecha</label>
-              <input id="fechaNacimiento" type="text">
-              <p> </p>
-            </div>
-            <br>
-
-            <button onclick="GuardarCambios()" class="NuevoButton" >Crear el nuevo producto</button>
-          </form>
       </div>
-
+    </div>
+    
     <footer>
-
+      <div class="contacto">
+        <p style="margin: 0%;">Información de Contacto</p>
+        <ul style="margin: 0%;">
+            <li>Dirección: Juan José Paso (sur) 4074 - San Francisco, Córdoba. </li>
+            <li>Teléfono:+54 324 565 644</li>
+            <li>Email: TeatroPeliM@gmail.com</li>
+            <li>No somos un cine, solo interpretamos peliculas</li>
+        </ul>
+    </div>
+    <div class="redesSociales">
+      <a href="./" class="redesSociales-A">
+          <img src="imagenes/instagram-logo-.png" alt="" class="icon-redes">
+      </a>
+      <a href="./" class="redesSociales-A">
+          <img src="imagenes/facebook-logo.png" alt="" class="icon-redes">
+      </a>
+   </div> 
+   <br>
     </footer>
     <script src="Javas/actores.js"></script>
 </body>

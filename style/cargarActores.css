@@ -1,3 +1,6 @@
+body{
+    background-color: antiquewhite;
+}
 nav{
     border: 1px, solid ;
     border-color: black;
@@ -38,6 +41,11 @@ button{
     width: 400px;   
     max-width: 100%;
 }
+img{
+    border: 1px, solid ;
+    border-color: #ea899e;
+    border-width: 3px;
+}
 a{
     border: 1px,solid;
     border-color: black;
@@ -47,6 +55,13 @@ a{
     margin: 10px;
     background-color: black;
 }
+.nuevoActor{
+    background-color: #6a6a6a;
+    box-shadow: 19px 20px 8px -9px black;
+    overflow: hidden;
+    width: 400px;   
+    max-width: 100%;
+}
 .contenedor{
     font-family: 'Times New Roman', Times, serif;
     display: flex;
@@ -54,7 +69,7 @@ a{
     justify-content: center;
     min-height: 90vh;
     margin: 30px;
-    background-color: #6a6a6a;
+    background-color: #292929;
 }
 .cabecera{
     background-color:black;
@@ -74,11 +89,11 @@ a{
     display: inline-block;
     margin-bottom: 7px;
     font: weigth 200px;
-    color: rgb(79, 4, 62);
+    color: black;
 }
 .form-control input{
     border:none;
-    background-color: aliceblue;
+    background-color: antiquewhite;
     display: block;
     font-family: inherit;
     font-size: 16px;
